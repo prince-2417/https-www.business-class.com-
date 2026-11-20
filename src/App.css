@@ -1,0 +1,87 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+main { overflow: hidden; color: #171d25; }
+a { color: inherit; }
+button, input, select { font: inherit; }
+
+.hero-section {
+  min-height: 690px;
+  position: relative;
+  color: white;
+  background: url('./assets/hero.jpg') center 52% / cover no-repeat;
+}
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(8,16,27,.18) 0%, rgba(8,16,27,.04) 48%, rgba(8,16,27,.55) 100%), linear-gradient(0deg, rgba(5,10,18,.25), transparent 55%); }
+.nav-shell { position: relative; z-index: 5; max-width: 1180px; height: 82px; margin: auto; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,.18); }
+.brand { display: flex; align-items: center; gap: 8px; color: white; text-decoration: none; font-size: 11px; font-weight: 800; letter-spacing: 1.2px; }
+.brand-mark { width: 30px; height: 30px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.55); border-radius: 50%; }
+.nav-links { display: flex; gap: 31px; }
+.nav-links a { text-decoration: none; font-size: 13px; opacity: .88; }
+.nav-phone { display: flex; align-items: center; gap: 7px; text-decoration: none; font-size: 12px; font-weight: 700; }
+.menu-toggle { display: none; }
+
+.hero-content { position: relative; z-index: 2; max-width: 1180px; height: 608px; margin: auto; display: grid; grid-template-columns: 310px 1fr; align-items: center; }
+.booking-card { width: 310px; background: rgba(255,255,255,.96); color: #20242a; border-radius: 10px; padding: 16px; box-shadow: 0 18px 45px rgba(0,0,0,.18); }
+.booking-card label { display: block; color: #777e86; font-size: 10px; margin-bottom: 8px; }
+.booking-card label select, .booking-card label input { width: 100%; height: 42px; margin-top: 4px; border: 1px solid #e5e7ea; border-radius: 5px; background: white; color: #31383f; padding: 0 10px; outline: none; }
+.date-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.search-button { width: 100%; height: 42px; border: 0; border-radius: 22px; background: #0d1a2b; color: white; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 11px; font-weight: 700; cursor: pointer; }
+.advisor { height: 55px; margin-top: 10px; border-top: 1px solid #edf0f2; display: flex; align-items: end; gap: 9px; padding-top: 9px; }
+.advisor-avatar { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: #d6b89c; font-size: 9px; color: white; }
+.advisor strong, .advisor small { display: block; }
+.advisor strong { font-size: 11px; }.advisor small { font-size: 8px; color: #90969d; margin-top: 2px; }
+.hero-copy { margin-left: 155px; max-width: 560px; margin-top: 30px; }
+.eyebrow { font-size: 10px; letter-spacing: 2.2px; font-weight: 800; margin-bottom: 18px; }
+.hero-copy h1 { font-family: Georgia, serif; font-size: clamp(46px, 5.2vw, 73px); line-height: .98; margin: 0 0 24px; letter-spacing: -3px; text-shadow: 0 3px 18px rgba(0,0,0,.18); }
+.hero-subtitle { font-size: 15px; line-height: 1.55; opacity: .92; }
+.hero-actions { display: flex; align-items: center; gap: 13px; margin-top: 25px; }
+.primary-button { height: 48px; padding: 0 20px; border-radius: 26px; background: white; color: #17202b; display: flex; align-items: center; gap: 14px; text-decoration: none; font-size: 12px; font-weight: 800; }
+.play-button { width: 48px; height: 48px; border: 1px solid rgba(255,255,255,.65); border-radius: 50%; display: grid; place-items: center; text-decoration: none; }.play-button span { font-size: 12px; margin-left: 2px; }
+
+.airlines { height: 205px; max-width: 1180px; margin: auto; text-align: center; border-bottom: 1px solid #eef0f2; display: flex; flex-direction: column; justify-content: center; }
+.airlines h3 { margin: 0 0 5px; font-family: Georgia, serif; font-size: 24px; }.airlines > p { margin: 0 0 36px; color: #747b82; font-size: 12px; }
+.airline-row { display: flex; align-items: center; justify-content: space-evenly; }
+.airline-logo { color: #1b252f; font-weight: 900; font-size: 13px; letter-spacing: .5px; }.logo-1 { color: #be1e2d; }.logo-2 { font-family: Georgia, serif; }.logo-3 { border: 2px solid #e11d48; border-radius: 50%; width: 38px; height: 38px; display: grid; place-items: center; overflow: hidden; font-size: 7px; }.logo-4 { color: #bf2029; }.logo-5 { color: #a02332; }
+
+.section { max-width: 1180px; margin: auto; }
+.destinations { padding: 62px 0 68px; }.section-heading { display: flex; justify-content: space-between; align-items: end; margin-bottom: 24px; }
+.kicker { color: #b48b52; font-size: 10px; letter-spacing: 1.8px; font-weight: 800; margin: 0 0 7px; }.section-heading h2 { font-family: Georgia, serif; font-size: 31px; margin: 0; }
+.slider-arrows { display: flex; gap: 7px; }.slider-arrows button { width: 38px; height: 38px; border-radius: 50%; border: 1px solid #dde1e5; background: white; cursor: pointer; }
+.destination-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }.destination-card { border: 1px solid #edf0f2; border-radius: 8px; overflow: hidden; background: white; }
+.destination-image { height: 175px; position: relative; }.destination-image img { width: 100%; height: 100%; object-fit: cover; }.destination-image span { position: absolute; right: 8px; top: 8px; color: white; background: #1c2630; padding: 5px 7px; border-radius: 12px; font-size: 8px; }
+.destination-body { padding: 13px; }.destination-body small { color: #9b7a4a; font-size: 8px; }.destination-body h3 { font-family: Georgia, serif; font-size: 16px; margin: 7px 0 4px; }.destination-body p { color: #8b9196; font-size: 9px; }.destination-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; }.destination-footer strong { font-family: Georgia, serif; font-size: 20px; }.destination-footer a { height: 34px; min-width: 70px; border: 1px solid #e2e5e8; border-radius: 18px; display: flex; align-items: center; justify-content: center; gap: 5px; text-decoration: none; font-size: 9px; }
+
+.deal-section { background: #eef7f5; padding: 58px 20px; }.deal-card { max-width: 1180px; height: 315px; margin: auto; display: grid; grid-template-columns: 58% 42%; background: #e7f1ef; border-radius: 9px; overflow: hidden; }
+.deal-copy { padding: 58px 75px; }.deal-copy h2 { font-family: Georgia, serif; font-size: 34px; line-height: 1.12; margin: 0 0 12px; }.deal-copy > p:not(.kicker) { max-width: 520px; color: #69737a; font-size: 11px; line-height: 1.7; }
+.deal-copy form { display: flex; width: 470px; margin-top: 19px; }.deal-copy input { flex: 1; height: 44px; border: 0; background: white; padding: 0 15px; border-radius: 22px 0 0 22px; outline: none; font-size: 10px; }.deal-copy button { width: 150px; border: 0; border-radius: 22px; background: #0e1c2e; color: white; margin-left: -20px; font-size: 10px; cursor: pointer; }
+.phone-art { position: relative; }.phone-art img { position: absolute; width: 420px; height: 250px; object-fit: cover; right: -25px; bottom: -35px; border-radius: 36px 36px 0 0; transform: rotate(-12deg); box-shadow: 0 20px 40px rgba(31,55,52,.2); }
+
+.support { padding: 70px 0; }.support-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 235px; gap: 12px; }.support-card { position: relative; border: 1px solid #edf0f2; border-radius: 8px; padding: 23px; overflow: hidden; }.support-card h3 { font-family: Georgia, serif; font-size: 16px; margin: 42px 0 8px; }.support-card p { color: #7b8186; font-size: 10px; line-height: 1.6; }.step { position: absolute; left: 20px; top: 18px; width: 28px; height: 28px; background: #182735; color: white; border-radius: 4px; display: grid; place-items: center; font-size: 11px; }.support-card img { position: absolute; width: 100%; height: 105px; object-fit: cover; left: 0; bottom: 0; }
+
+.reviews { background: #101f2e; color: white; padding: 70px max(30px, calc((100% - 1180px)/2)) 75px; }.reviews-head { text-align: center; }.reviews .kicker { color: #8eacaa; }.reviews-head h2 { font-family: Georgia, serif; font-size: 32px; margin: 8px 0; }.reviews-head > p:last-child { color: #b8c1c8; font-size: 11px; }
+.trust-summary { max-width: 1000px; height: 95px; margin: 28px auto 12px; border: 1px solid rgba(255,255,255,.09); border-radius: 8px; display: flex; align-items: center; justify-content: space-around; }.trust-brand { display: grid; grid-template-columns: auto auto auto; align-items: center; gap: 12px; }.trust-brand strong { font-family: Georgia, serif; }.stars { color: #4abd82; letter-spacing: 3px; }.trust-brand b { font-size: 12px; }.rating strong { display: block; font-size: 31px; }.rating span { color: #aab4ba; font-size: 9px; }
+.video-banner { height: 300px; max-width: 1180px; margin: auto; border-radius: 8px; position: relative; overflow: hidden; }.video-banner img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.58); }.video-banner button { position: absolute; left: 50%; top: 50%; width: 60px; height: 60px; border: 1px solid white; border-radius: 50%; background: rgba(0,0,0,.25); color: white; transform: translate(-50%, -50%); }.video-banner blockquote { position: absolute; right: 35px; bottom: 22px; max-width: 270px; font-family: Georgia, serif; font-size: 14px; line-height: 1.45; }
+.stats-grid { max-width: 1180px; margin: 14px auto 0; display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }.stats-grid article { min-height: 130px; border: 1px solid rgba(255,255,255,.09); border-radius: 7px; padding: 24px; }.stats-grid strong { color: #cfd8dc; font-size: 11px; }.stats-grid h3 { font-size: 12px; margin: 12px 0 7px; }.stats-grid p { color: #98a5ad; font-size: 9px; line-height: 1.5; }
+
+.faq { padding: 68px 0; }.faq-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 8px 12px; }.faq-item { border: 1px solid #edf0f2; border-radius: 7px; background: white; }.faq-item button { width: 100%; min-height: 58px; border: 0; background: transparent; display: flex; justify-content: space-between; align-items: center; padding: 0 16px; text-align: left; font-size: 11px; cursor: pointer; }.faq-item button b { color: #8e969d; font-size: 17px; }.faq-item p { padding: 0 16px 16px; margin: 0; color: #737c82; font-size: 10px; line-height: 1.6; }.faq-item.open { border-color: #d7dedf; }
+
+.contact { padding: 20px 0 70px; }.contact-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }.contact-grid article { border: 1px solid #edf0f2; border-radius: 8px; padding: 22px; }.contact-grid article > span { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 7px; background: #eef3f4; }.contact-grid h3 { font-family: Georgia, serif; font-size: 16px; margin: 16px 0 7px; }.contact-grid p { color: #80878c; font-size: 10px; }.contact-grid a { display: inline-block; margin-top: 12px; font-size: 10px; color: #9c7a4d; text-decoration: none; }
+
+footer { background: #0d1c2a; color: white; }.footer-main { max-width: 1180px; min-height: 210px; margin: auto; display: grid; grid-template-columns: 2fr repeat(3,1fr); gap: 30px; align-items: start; padding-top: 45px; }.footer-main h3 { font-size: 10px; letter-spacing: 1px; margin: 0 0 15px; }.footer-main div:not(.footer-brand) a { display: block; color: #abb4ba; text-decoration: none; font-size: 9px; margin: 8px 0; }.footer-brand p { color: #99a4ac; font-size: 9px; }.copyright { max-width: 1180px; height: 48px; margin: auto; border-top: 1px solid rgba(255,255,255,.08); color: #7f8b94; font-size: 8px; display: flex; align-items: center; }
+
+@media (max-width: 1100px) {
+  .nav-shell, .hero-content, .airlines, .section, .deal-card, .footer-main, .copyright { width: calc(100% - 40px); }
+  .hero-copy { margin-left: 90px; }
+  .deal-copy { padding-left: 45px; }
+}
+@media (max-width: 760px) {
+  .hero-section { min-height: 760px; }.nav-shell { width: calc(100% - 32px); height: 68px; }.nav-phone { display: none; }.menu-toggle { display: block; border: 0; background: transparent; color: white; font-size: 24px; }
+  .nav-links { display: none; position: absolute; left: 0; right: 0; top: 68px; background: #101c29; padding: 18px; border-radius: 8px; }.nav-links.open { display: grid; gap: 14px; }.nav-links a { padding: 6px; }
+  .hero-content { width: calc(100% - 32px); height: 690px; display: flex; flex-direction: column-reverse; justify-content: start; gap: 25px; padding-top: 70px; }.hero-copy { margin: 0; text-align: center; }.hero-copy h1 { font-size: 43px; letter-spacing: -2px; }.eyebrow { display: none; }.hero-subtitle { font-size: 12px; }.hero-actions { justify-content: center; }.booking-card { width: 100%; max-width: 390px; }.advisor { display: none; }
+  .airlines { width: calc(100% - 32px); height: 175px; }.airline-row { flex-wrap: wrap; gap: 20px 35px; }.airline-logo { font-size: 10px; }.airline-logo:nth-child(n+5) { display: none; }
+  .section { width: calc(100% - 32px); }.destinations { padding: 45px 0; }.section-heading h2 { font-size: 25px; }.destination-grid { grid-template-columns: repeat(2,1fr); }.destination-image { height: 155px; }.destination-card:nth-child(n+3) { display: none; }
+  .deal-section { padding: 35px 16px; }.deal-card { width: 100%; height: 390px; grid-template-columns: 1fr; }.deal-copy { padding: 38px 25px; z-index: 2; }.deal-copy h2 { font-size: 27px; }.deal-copy form { width: 100%; }.phone-art { position: absolute; opacity: .22; }.phone-art img { width: 300px; right: -60px; }
+  .support { padding: 45px 0; }.support-grid { grid-template-columns: repeat(2,1fr); grid-auto-rows: 210px; }.support-card:nth-child(n+3) { display: none; }
+  .reviews { padding: 45px 16px; }.reviews-head h2 { font-size: 24px; }.trust-summary { height: 80px; }.trust-brand { grid-template-columns: auto auto; }.trust-brand b { display: none; }.video-banner { height: 230px; }.video-banner blockquote { left: 20px; right: 20px; bottom: 12px; }.stats-grid { grid-template-columns: 1fr; }.stats-grid article { min-height: 100px; }
+  .faq { padding: 45px 0; }.faq-grid { grid-template-columns: 1fr; }.contact { padding-bottom: 45px; }.contact-grid { grid-template-columns: 1fr; }.contact-grid article:nth-child(n+3) { display: none; }
+  .footer-main { width: calc(100% - 32px); grid-template-columns: repeat(3,1fr); min-height: 180px; }.footer-brand { grid-column: 1/-1; }.copyright { width: calc(100% - 32px); }
+}
